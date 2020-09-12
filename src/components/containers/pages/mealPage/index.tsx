@@ -20,9 +20,10 @@ function MealPage(){
     
 
     function addMeal(){
-        if(state.name === "" &&
+        if(
+           state.name === "" &&
            state.description === "" &&
-            state.image === ""
+           state.image === ""
           )
           return 
         setData({...getData,meals:[...getData.meals,state]})
