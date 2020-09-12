@@ -11,6 +11,7 @@ interface IMeal {
     actionTitle: string,
     cls: string
 }
+
 export default function Meal(props: IMeal) {
     const [state, setState] = useContext(MealsContext)
 
@@ -18,6 +19,7 @@ export default function Meal(props: IMeal) {
     function addMeal() {
         setState({ ...state, orders: [...state.orders, props] })
     }
+
     return (
         <Card className="col-lg-4">
             <Card.Img variant="top" src={props.image} />
