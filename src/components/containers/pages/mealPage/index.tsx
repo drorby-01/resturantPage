@@ -8,14 +8,14 @@ interface Meal{
     name:string,
     description:string,
     image:string,
-    rank:number
+    rating:number
 }
 
 
 
 function MealPage(){
     const [getData,setData] = useContext(MealsContext)
-    const meal:Meal= {name:"",description:"",image:"",rank:1}
+    const meal:Meal= {name:"",description:"",image:"",rating:1}
     const [state, setstate] = useState(meal)
     
 
@@ -43,8 +43,8 @@ function MealPage(){
     }}/>
     <Form.Label>image</Form.Label>
     <Form.Control type="url" onChange={(e)=>setstate({...state,image:e.target.value})}/>
-    <Form.Label>rank</Form.Label>
-    <Form.Control type="number" onChange={(e)=>setstate({...state,rank:Number(e.target.value)})} />
+    <Form.Label>rating</Form.Label>
+    <Form.Control type="number" onChange={(e)=>setstate({...state,rating:Number(e.target.value)})} />
   </Form.Group>
      <Button variant="primary" onClick={addMeal} >
        Add Meal 

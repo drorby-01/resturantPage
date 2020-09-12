@@ -1,7 +1,8 @@
 import React from "react"
+import ConfigurationForm from "./configurationForm"
 
 function ConfiguratonPage(){
-    return <div> Configuration Page </div>
+    return <ConfigurationForm/>
 }
 
 export default ConfiguratonPage

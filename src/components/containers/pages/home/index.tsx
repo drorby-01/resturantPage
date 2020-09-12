@@ -18,10 +18,10 @@ export default function HomePage() {
     useEffect(() => {
         getRecipesApi()
     }, [])
-    
+
     return <div className="row">
         {
-            state.meals.map((meal: any) => { return <Meal actionTitle="Order Now" {...meal} /> })
+            state.meals.map((meal: any) => { return <Meal actionTitle="Order Now" {...meal} rating={meal.rating}  /> })
         }
     </div>
 }
